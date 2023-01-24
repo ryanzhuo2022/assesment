@@ -1,4 +1,4 @@
-# Assesment
+# Assessment
 ## INTRODUCTION
 ### Main application
 * Technologies used - Spring Boot, Spring Data JPA
