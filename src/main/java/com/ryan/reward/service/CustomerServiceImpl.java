@@ -41,7 +41,8 @@ public class CustomerServiceImpl implements CustomerService{
             record.put(curr, record.getOrDefault(curr, 0) + reward);
             totalReward += reward;
         }
-        record.put("totalReward", totalReward);
+        record.put("total_reward", totalReward);
+        record.put("customer_id", (int) id);
         return record;
     }
 
