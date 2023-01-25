@@ -1,6 +1,7 @@
 package com.ryan.reward.entity;
 
 import jakarta.persistence.*;
+import org.springframework.data.repository.cdi.Eager;
 
 import java.util.List;
 
@@ -22,9 +23,12 @@ public class Customer {
     @Column(name = "name")
     private String name;
 
-    @OneToMany()
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
     private List<Transaction> transactions;
 
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
 }
 
 

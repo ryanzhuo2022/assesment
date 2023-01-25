@@ -55,4 +55,9 @@ public class CustomerServiceImpl implements CustomerService{
         return rewards;
     }
 
+    @Override
+    public Customer findById(long id) {
+        return customerRepository.findById(id).orElse(null);
+    }
+
 }
